@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <table class = "calculator">
+        <tr>
+            <td colspan= "6"><input class = "display-box" type ="text" placeholder="0" id = "result" disabled/></td>
+        </tr>
+        <tr class="btn">
+            <td><input type="button" value="CE" onclick="backspace()" id="ce"/></td>
+            <!-- backspace() function clears values one at a time -->
+            <td><input type="button" value="π" onclick="display('3.14159265')"/></td>
+            <td><input type="button" value="(" onclick="display('(')"/></td>
+            <td><input type="button" value=")" onclick="display(')')"/></td>
+            <td><input type="button" value="%" onclick="display('%')"/></td>
+            <td><input type="button" value="AC" onclick="clearScreen()" id="ac"/></td>
+            <!-- clearScreen() function clears all the values -->
+        </tr>
+        <tr class="btn">
+            <td><input type="button" value="sin" onclick="sin()"/></td>
+            <td><input type="button" value="²√x" onclick="sqrt()"/></td>
+            <!-- sqrt() function finds the square root of the entered number -->
+            <td><input type="button" value="7" onclick="display('7')"/></td>
+            <td><input type="button" value="8" onclick="display('8')"/></td>
+            <td><input type="button" value="9" onclick="display('9')"/></td>
+            <td><input type="button" value="/" onclick="display('/')"/></td>
+        </tr>
+        <tr class="btn">
+            <td><input type="button" value="cos" onclick="cos()"/></td>
+            <td><input type="button" value="x²" onclick="square()"/></td>
+            <td><input type="button" value="4" onclick="display('4')"/></td>
+            <td><input type="button" value="5" onclick="display('5')"/></td>
+            <td><input type="button" value="6" onclick="display('6')"/></td>
+            <td><input type="button" value="-" onclick="display('-')"/></td>
+            <!-- power() function displays the exponent value of a number -->
+        </tr>
+        <tr class="btn">
+            <td><input type="button" value="tan" onclick="tan()"/></td>
+            <td><input type="button" value="x³" onclick="cube()"/> </td>
+            <td><input type="button" value="1" onclick="display('1')"/></td>
+            <td><input type="button" value="2" onclick="display('2')"/></td>
+            <td><input type="button" value="3" onclick="display('3')"/></td>
+            <td><input type="button" value="+" onclick="display('+')"/></td>  
+        </tr>
+        <tr class="btn">
+            <td><input type="button" value="log" onclick="baseTenLog()"/></td>
+            <!-- logTen() function denotes the base10 log function -->
+             <td><input type="button" value="ln" onclick="naturalLog()"/></td>
+            <!--logTwo() function denotes the base2 log function  -->
+            <td><input type="button" value="0" onclick="display('0')"/></td>
+            <td><input type="button" value="." onclick="display('.')"/></td>
+            <td><input type="button" value="=" onclick="calculate()" id="equals"/></td>
+            <!-- calculate() function evaluates the mathematical expression -->
+            <td><input type="button" value="*" onclick="display('*')"/></td>
+        </tr>
+    </table>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
+
